@@ -1,0 +1,6 @@
+- name: Create {{ ecs_cluster }} cluster
+  ecs_cluster:
+    region: "{{ region }}"
+    profile: "{{ profile|default(omit) }}"
+    name: "{{ ecs_cluster }}"
+    state: present
